@@ -1,12 +1,14 @@
 import java.applet.*;
 import java.awt.*;
+
+/*
 public class testmain extends Applet{
 	private Slider s;
 	public testmain(){
 		super();
 	}
 	 public void init() {
-	        s=new Slider(300,300,20,1);
+	        s=new Slider(300,300,1);
 	        this.setCursor(new Cursor(Cursor.MOVE_CURSOR));
 	 }
 
@@ -41,3 +43,4 @@ public class testmain extends Applet{
 	            
 	        }
 }
+*/
