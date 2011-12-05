@@ -1,7 +1,7 @@
 import java.rmi.RemoteException;
 
 
-public interface RemoteInterface  extends java.rmi.Remote {
+public interface ServerInterface  extends java.rmi.Remote {
 
 	// returns integer value between 0 through 3 that will be the playerID for caller client. Subsequently, he will be attached to corresponding side of table
 	public int getPlayerID() throws RemoteException;
