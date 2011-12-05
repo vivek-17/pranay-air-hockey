@@ -21,6 +21,7 @@ public class Main extends Applet implements Runnable{
     int RMIregPort;
 	InetAddress HostName;
 	private volatile boolean hasFourPlayers;
+	private volatile boolean terminate;
 	
     public void init() {
     
@@ -130,16 +131,16 @@ public class Main extends Applet implements Runnable{
 
 			Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 		}
+		terminate = true;
 	}
 
 
     public void paint(Graphics g) {
 		
-	//Draw a Rectangle around the applet's display area.
-    	g.setColor(Color.BLACK);
-        g.drawRect(0, 0, 
-		   getWidth() - 1,
-		   getHeight() - 1);
+    	if(terminate){
+    		g.drawString("Goal Capacity reached", 400, 400);
+    		return;
+    	}
         
     // Draw boundary with goals
         
